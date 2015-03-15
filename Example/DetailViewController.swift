@@ -67,20 +67,20 @@ class DetailViewController: UITableViewController {
 
         self.refreshControl?.beginRefreshing()
 
-        let start = CACurrentMediaTime()
-        self.request?.responseString { (request, response, body, error) in
-            let end = CACurrentMediaTime()
-            self.elapsedTime = end - start
-
-            for (field, value) in response!.allHeaderFields {
-                self.headers["\(field)"] = "\(value)"
-            }
-
-            self.body = body
-
-            self.tableView.reloadData()
-            self.refreshControl?.endRefreshing()
-        }
+//        let start = CACurrentMediaTime()
+//        self.request.responseString { (request, response, body, error) in
+//            let end = CACurrentMediaTime()
+//            self.elapsedTime = end - start
+//
+//            for (field, value) in response!.allHeaderFields {
+//                self.headers["\(field)"] = "\(value)"
+//            }
+//
+//            self.body = body
+//
+//            self.tableView.reloadData()
+//            self.refreshControl?.endRefreshing()
+//        }
     }
 
     // MARK: UITableViewDataSource
